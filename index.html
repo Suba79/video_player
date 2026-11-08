@@ -57,7 +57,10 @@
 
         .player-volume-icon {
             font-size: 22px;
-            transform: translateY(0);
+        }
+
+        .player-controls-spacer {
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -97,6 +100,16 @@
                     aria-label="Включить звук"
                     hidden>
                 <i class="fa fa-volume-off player-icon player-volume-icon"
+                   aria-hidden="true"></i>
+            </button>
+
+            <div class="player-controls-spacer"
+                 aria-hidden="true"></div>
+
+            <button type="button"
+                    class="js-fullscreen-button player-button"
+                    aria-label="На весь экран">
+                <i class="fa fa-expand player-icon"
                    aria-hidden="true"></i>
             </button>
 
