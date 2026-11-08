@@ -9,53 +9,63 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        button[hidden] {
-            display: none !important;
+        .player {
+            width: 800px;
+            height: 500px;
+        }
+
+        .player-video {
+            width: 100%;
+            height: 450px;
+        }
+
+        .player-controls {
+            background-color: black;
+            height: 50px;
+        }
+
+        .player-button {
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+        }
+
+        .player-button[hidden] {
+            display: none;
+        }
+
+        .player-icon {
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <div id="player" style="width: 800px; height: 500px;">
+    <div id="player" class="player">
 
-        <div class="js-video-container"
-             style="width: 100%; height: 450px;">
+        <div class="js-video-container player-video">
         </div>
 
-        <div style="background-color: black; height: 50px;">
+        <div class="player-controls">
 
             <button type="button"
-                    class="js-play-button"
-                    style="border: none;
-                           cursor: pointer;
-                           background-color: transparent;
-                           display: inline-flex;
-                           align-items: center;
-                           justify-content: center;
-                           vertical-align: middle;
-                           width: 32px;
-                           height: 32px;"
+                    class="js-play-button player-button"
                     aria-label="Воспроизвести видео">
-                <i class="fa fa-play"
-                   style="color: white;"
+                <i class="fa fa-play player-icon"
                    aria-hidden="true"></i>
             </button>
 
             <button type="button"
-                    class="js-pause-button"
-                    hidden
-                    style="border: none;
-                           cursor: pointer;
-                           background-color: transparent;
-                           display: inline-flex;
-                           align-items: center;
-                           justify-content: center;
-                           vertical-align: middle;
-                           width: 32px;
-                           height: 32px;"
-                    aria-label="Приостановить видео">
-                <i class="fa fa-pause"
-                   style="color: white;"
+                    class="js-pause-button player-button"
+                    aria-label="Приостановить видео"
+                    hidden>
+                <i class="fa fa-pause player-icon"
                    aria-hidden="true"></i>
             </button>
 
