@@ -23,6 +23,8 @@
         }
 
         .player-controls {
+            display: flex;
+            align-items: center;
             background-color: black;
             flex-shrink: 0;
         }
@@ -69,6 +71,21 @@
                     aria-label="Приостановить видео"
                     hidden>
                 <i class="fa fa-pause player-icon"
+                   aria-hidden="true"></i>
+            </button>
+
+            <button type="button"
+                    class="js-mute-button player-button"
+                    aria-label="Выключить звук">
+                <i class="fa fa-volume-up player-icon"
+                   aria-hidden="true"></i>
+            </button>
+
+            <button type="button"
+                    class="js-volume-button player-button"
+                    aria-label="Включить звук"
+                    hidden>
+                <i class="fa fa-volume-off player-icon"
                    aria-hidden="true"></i>
             </button>
 
