@@ -25,20 +25,23 @@
         .player-controls {
             display: flex;
             align-items: center;
+            gap: 12px;
+            padding: 0 8px;
             background-color: black;
             flex-shrink: 0;
         }
 
         .player-button {
+            box-sizing: border-box;
             border: none;
             cursor: pointer;
             background-color: transparent;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            vertical-align: middle;
-            min-width: 44px;
-            min-height: 44px;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
         }
 
         .player-button[hidden] {
@@ -46,8 +49,15 @@
         }
 
         .player-icon {
+            display: block;
             color: white;
             font-size: 20px;
+            line-height: 1;
+        }
+
+        .player-volume-icon {
+            font-size: 22px;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -78,7 +88,7 @@
             <button type="button"
                     class="js-mute-button player-button"
                     aria-label="Выключить звук">
-                <i class="fa fa-volume-up player-icon"
+                <i class="fa fa-volume-up player-icon player-volume-icon"
                    aria-hidden="true"></i>
             </button>
 
@@ -86,7 +96,7 @@
                     class="js-volume-button player-button"
                     aria-label="Включить звук"
                     hidden>
-                <i class="fa fa-volume-off player-icon"
+                <i class="fa fa-volume-off player-icon player-volume-icon"
                    aria-hidden="true"></i>
             </button>
 
