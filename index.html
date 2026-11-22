@@ -70,18 +70,24 @@
             line-height: 1;
         }
 
+
         .player-time {
             color: white;
             font-family: "Roboto", sans-serif;
             font-size: 16px;
             font-weight: 400;
             white-space: nowrap;
+        }
+
+        .player-current-time {
             margin-left: 4px;
         }
 
-        .player-controls-spacer {
+        .player-progress-placeholder {
             flex-grow: 1;
+            min-width: 0;
         }
+
     </style>
 </head>
 <body>
@@ -122,15 +128,18 @@
                    aria-hidden="true"></i>
             </button>
 
-            <div class="player-time"
-                 aria-label="Время видео">
+            <div class="player-time player-current-time"
+                 aria-label="Текущее время">
                 <span class="js-current-time">0:00:00</span>
-                —
-                <span class="js-duration">0:00:00</span>
             </div>
 
-            <div class="player-controls-spacer"
+            <div class="player-progress-placeholder"
                  aria-hidden="true"></div>
+
+            <div class="player-time"
+                 aria-label="Продолжительность видео">
+                <span class="js-duration">0:00:00</span>
+            </div>
 
             <button type="button"
                     class="js-fullscreen-button player-button"
