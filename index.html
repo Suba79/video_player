@@ -118,10 +118,14 @@
             cursor: pointer;
 
             opacity: 0;
+            transition-property: opacity;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in;
         }
 
         .player-progress:hover .progress-thumb {
             opacity: 1;
+            transition-timing-function: ease-out;
         }
     </style>
 </head>
