@@ -70,9 +70,6 @@
             line-height: 1;
         }
 
-        
-
-
         .player-time {
             color: white;
             font-family: "Roboto", sans-serif;
@@ -83,10 +80,8 @@
 
         .player-current-time {
             margin-left: 4px;
-            transform: translateX(-1px);
+            transform: translateX(-3px);
         }
-
-
 
         .player-progress {
             display: flex;
@@ -103,6 +98,28 @@
             height: 5px;
             background-color: #f8104d;
             border-radius: 4px;
+        }
+
+        /* Временная площадка для ползунка */
+        .thumb-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 80px;
+            margin-top: 24px;
+            background-color: black;
+        }
+
+        /* Круглый ползунок */
+        .progress-thumb {
+            box-sizing: border-box;
+            width: 18px;
+            height: 18px;
+            background-color: #f8104d;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
@@ -167,7 +184,11 @@
             </button>
 
         </div>
+    </div>
 
+    <!-- Отдельный образец ползунка -->
+    <div class="thumb-preview">
+        <div class="progress-thumb"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
