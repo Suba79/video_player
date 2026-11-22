@@ -48,15 +48,37 @@
 
         .player-button {
             box-sizing: border-box;
+            appearance: none;
+            -webkit-appearance: none;
+
             border: none;
-            cursor: pointer;
+            padding: 0;
+            margin: 0;
+
             background-color: transparent;
+            font: inherit;
+            cursor: pointer;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             width: 32px;
             height: 32px;
             flex-shrink: 0;
+
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Убираем фокусную рамку после клика мышью */
+        .player-button:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* Сохраняем рамку для управления клавиатурой */
+        .player-button:focus-visible {
+            outline: 2px solid white;
+            outline-offset: -2px;
         }
 
         .player-button[hidden] {
