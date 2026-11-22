@@ -70,7 +70,6 @@
             line-height: 1;
         }
 
-
         .player-time {
             color: white;
             font-family: "Roboto", sans-serif;
@@ -83,11 +82,19 @@
             margin-left: 4px;
         }
 
-        .player-progress-placeholder {
+        .player-progress {
             flex-grow: 1;
             min-width: 0;
+            height: 8px;
+            background-color: grey;
+            cursor: pointer;
         }
 
+        .player-progress-filled {
+            width: 0;
+            height: 100%;
+            background-color: #f8104d;
+        }
     </style>
 </head>
 <body>
@@ -133,8 +140,10 @@
                 <span class="js-current-time">0:00:00</span>
             </div>
 
-            <div class="player-progress-placeholder"
-                 aria-hidden="true"></div>
+            <div class="js-progress player-progress"
+                 aria-label="Полоса прокрутки видео">
+                <div class="js-progress-slider player-progress-filled"></div>
+            </div>
 
             <div class="player-time"
                  aria-label="Продолжительность видео">
